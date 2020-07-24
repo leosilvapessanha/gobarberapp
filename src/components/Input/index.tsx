@@ -46,7 +46,11 @@ const Input: React.FC<InputProps> = ({ name, icon, ...rest }) => {
   return (
     <Container>
 
-      <Icon name={icon} size={20} color="#666360" />
+      <Icon
+        name={icon}
+        size={20}
+        color="#666360"
+      />
 
       <TextInput
         ref={inputElementRef}
