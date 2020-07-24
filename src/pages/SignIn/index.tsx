@@ -15,14 +15,22 @@ import { Form } from '@unform/mobile'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 
-import { Container, Title, ForgotPassword, ForgotPasswordText, CreateAccountButton, CreateAccountButtonText } from './styles'
+import {
+  Container,
+  Title,
+  ForgotPassword,
+  ForgotPasswordText,
+  CreateAccountButton,
+  CreateAccountButtonText
+} from './styles'
+
 import logoImg from '../../assets/logo.png'
 
 const SignIn: React.FC = () => {
 
   const navigation = useNavigation()
   const formRef = useRef<FormHandles>(null)
-  const passwordInputRef = useRef<TextInput>(null)
+  const passwordInputRef = useRef<TextInput>(null);
   const handleSignIn = useCallback((data: object) => {
 
     console.log(data)
@@ -58,9 +66,9 @@ const SignIn: React.FC = () => {
                 autoCapitalize="none"
                 keyboardType="email-address"
                 returnKeyType="next"
-                onSubmitEditing={( => {
+                onSubmitEditing={() => {
 
-                })}
+                }}
               />
 
               <Input

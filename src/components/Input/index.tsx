@@ -14,7 +14,7 @@ interface InputValueRefference {
 }
 
 interface InputRef {
-  foucus(): void
+  focus(): void
 }
 
 const Input: React.RefForwardingComponent<InputRef, InputProps> = ({ name, icon, ...rest }, ref) => {
@@ -24,7 +24,7 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = ({ name, icon,
   const inputValueRef = useRef<InputValueRefference>({ value: defaultValue })
 
   useImperativeHandle(ref, () => ({
-    foucus() {
+    focus() {
 
       inputElementRef.current.focus()
 
